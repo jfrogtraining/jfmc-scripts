@@ -11,11 +11,6 @@ localRepository(repokey) {
   excludesPattern "" // default
   repoLayoutRef "maven-2-default"
   packageType "generic" // "maven" | "gradle" | "ivy" | "sbt" | "nuget" | "gems" | "npm" | "bower" | "debian" | "pypi" | "docker" | "vagrant" | "gitlfs" | "yum" | "generic" 
-  checksumPolicyType "client-checksums" // default | "server-generated-checksums"
-  handleReleases true // default
-  handleSnapshots true // default
-  maxUniqueSnapshots  0 // default
-  snapshotVersionBehavior "unique" // "non-unique" default | "deployer"
   blackedOut false // default
   archiveBrowsingEnabled true
 
