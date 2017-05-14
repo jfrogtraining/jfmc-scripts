@@ -1,29 +1,23 @@
-name = userInput (
+repoName = userInput (
     type : "STRING",
     description : "Please provide a repository name"
   )
 
-repoDescription = userInput (
-    type : "STRING",
-    description : "Please provide a public description"
-  )
-
-repo = userInput (
+repoList = userInput (
     type : "REPOSITORY",
-    description : "Please provide repositories to aggregate ",
+    description : "Please provide repositories to aggregate",
     multivalued : true
   )
-DefaultRepo = userInput (
+DefaultDeploymentRepo = userInput (
     type : "REPOSITORY",
-    description : "Please provide Default deployment",
+    description : "Please provide Default deployment repository",
     multivalued : false
   )
 virtualRepository(name) {
-  description "$repoDescription"
   repositories (repo*.key) 
   notes "Created through JFrog Mission Control"
   defaultDeploymentRepo "$DefaultRepo.key"
   includesPattern "**/*" 
   excludesPattern "" 
-  packageType "maven" 
+  packageType "generic" 
 }
