@@ -14,7 +14,7 @@ DefaultDeploymentRepo = userInput (
     multivalued : false
   )
 virtualRepository(name) {
-  repositories (repoName*.key) 
+  repositories (repoList*.key) 
   notes "Created through JFrog Mission Control"
   defaultDeploymentRepo "$DefaultRepo.key"
   includesPattern "**/*" 
