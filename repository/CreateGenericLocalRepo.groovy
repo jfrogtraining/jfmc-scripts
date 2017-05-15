@@ -1,6 +1,6 @@
-repokey = userInput (
+repoName = userInput (
     type : "STRING", // "BOOLEAN", "INTEGER", "INSTANCE", "REPOSITORY"
-    description : "Repository Key",
+    description : "Please enter the Repository Name",
     validations : (["cron"])
   )
 
