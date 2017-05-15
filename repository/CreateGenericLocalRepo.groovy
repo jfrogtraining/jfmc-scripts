@@ -4,7 +4,7 @@ repoName = userInput (
     validations : (["cron"])
   )
 
-localRepository(repokey) {
+localRepository(repoName) {
   description "Public Description"
   notes "Some internal notes"
   includesPattern "**/*" // default
