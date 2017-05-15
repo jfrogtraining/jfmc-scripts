@@ -8,15 +8,17 @@ repoList = userInput (
     description : "Please provide repositories to aggregate",
     multivalued : true
   )
-DefaultDeploymentRepo = userInput (
+
+DefaultDeployRepo = userInput (
     type : "REPOSITORY",
     description : "Please provide Default deployment repository",
     multivalued : false
   )
+
 virtualRepository(name) {
   repositories (repoList*.key) 
   notes "Created through JFrog Mission Control"
-  defaultDeploymentRepo "$DefaultRepo.key"
+  defaultDeploymentRepo "$DefaultDeployRepo.key"
   includesPattern "**/*" 
   excludesPattern "" 
   packageType "generic" 
