@@ -13,8 +13,8 @@ DefaultDeployRepo = userInput (
     description : "Please provide Default deployment repository",
     multivalued : false
   )
-virtualRepository(name) {
-  description "$Public Description"
+virtualRepository(repoName) {
+  description "Public Description"
   repositories (repoList*.key) 
   notes "Created through JFrog Mission Control"
   defaultDeploymentRepo "$DefaultDeployRepo.key"
