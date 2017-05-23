@@ -1,5 +1,5 @@
 repositories = userInput (
-    name : "User Friendly Name", // Optional
+    name : "Select Destination Repositories", // Optional
     type : "REPOSITORY", // "BOOLEAN", "INTEGER", "INSTANCE", "REPOSITORY"
     description : "please provide a value",
     multivalued : true
